@@ -10030,6 +10030,10 @@ form.user .btn-user {
   line-height: 1;
   width: 12.5rem;
 }
+.section-overflow{
+  overflow-x: scroll;
+}
+
 @-webkit-keyframes noise-anim {
   0% {
     clip: rect(49px, 9999px, 40px, 0);

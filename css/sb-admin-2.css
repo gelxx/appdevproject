@@ -10831,6 +10831,11 @@ a:focus {
   width: 100%;
 }
 
+.section-overflow{
+  overflow-x: scroll;
+}
+}
+
 @media (min-width: 768px) {
   .chart-area {
     height: 20rem;

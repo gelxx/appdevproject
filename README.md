@@ -67,3 +67,7 @@ Copyright 2013-2021 Start Bootstrap LLC. Code released under the [MIT](https://g
 ## Disclaimer
 
 We do not take ownership of this theme. This theme is created by Start Bootstrap.
+
+### Testing
+
+I'm new to Github and I want to test something about branching.

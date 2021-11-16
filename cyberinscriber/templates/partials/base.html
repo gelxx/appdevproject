@@ -1,0 +1,52 @@
+{% load static %}
+ {% block headerinclude %}
+
+<!DOCTYPE html>
+
+<html class="no-js">
+    <head>
+       
+
+        <link rel="stylesheet" href="{% static 'assets/css/bootstrap.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/font-awesome.min.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/owl.carousel.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/animate.css' %}">
+        <link rel="stylesheet" href="{% static 'assets/css/main.css' %}">
+        <!-- Responsive Stylesheet -->
+        <link rel="stylesheet" href="{% static 'css/responsive.css' %}">
+
+     {% endblock headerinclude %}
+ {% block footerinclude %}
+    </head>
+    <style type="text/css">
+    .about{
+      
+    }
+
+    </style>
+
+   
+  {% endblock footerinclude %}
+
+{% block content %}
+
+    
+        <!-- Js -->
+        <script src="{% static 'assets/js/vendor/modernizr-2.6.2.min.js' %}"></script>
+        <script src="{% static 'assets/js/vendor/jquery-1.10.2.min.js' %}"></script>
+        <script src="{% static 'assets/https://maps.googleapis.com/maps/api/js?sensor=false' %}"></script>
+        <script src="{% static 'assets/js/jquery.lwtCountdown-1.0.js' %}"></script>
+        <script src="{% static 'assets/js/bootstrap.min.js' %}"></script>
+        <script src="{% static 'assets/js/owl.carousel.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.validate.min.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.form.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.nav.js' %}"></script>
+        <script src="{% static 'assets/js/jquery.sticky.js' %}"></script>
+        <script src="{% static 'assets/js/plugins.js' %}"></script>
+        <script src="{% static 'assets/js/wow.min.js' %}"></script>
+        <script src="{% static 'assets/js/main.js' %}"></script>
+        
+
+ {% endblock content %}
+    </body>
+</html>

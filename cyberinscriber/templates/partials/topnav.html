@@ -1,30 +1,56 @@
-{% load static  %}
+{% load static %}
 <!-- CSS Bootstrap -->
 
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link
+  rel="stylesheet"
+  href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+  integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+  crossorigin="anonymous"
+/>
 
-
-<nav class="navbar navbar-expand-lg navbar-warning " style="background-color:#800000;">
-  <a class="navbar-brand" href="http://127.0.0.1:8000/cyberinscriber/landingpage"><img src="{% static 'assets/img/team/navbar-logo.svg' %}" alt="" />LOGO</a>
+<nav
+  class="navbar navbar-expand-lg navbar-warning"
+  style="background-color: #800000"
+>
+  <a
+    class="navbar-brand d-flex align-items-center"
+    href="http://127.0.0.1:8000/cyberinscriber/landingpage"
+  >
+    <img
+      class="p-0"
+      src="{% static 'assets/images/Cyber Inscriber Logo.png' %}"
+      width="50px"
+      height="50px"
+      alt="LOGO" />
+    <div class="sidebar-brand-text text-white mx-3">
+      Cyber Inscriber <sup></sup></div
+  ></a>
   <!--Navbar Starts Here-->
- 
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-    </button>
 
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav mr-auto">
-        <li class="nav-item active">
-            <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
-       <!-- </li>
+  <button
+    class="navbar-toggler"
+    type="button"
+    data-toggle="collapse"
+    data-target="#navbarSupportedContent"
+    aria-controls="navbarSupportedContent"
+    aria-expanded="false"
+    aria-label="Toggle navigation"
+  >
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
+        <!-- </li>
         <li class="nav-item active">
             <a class="nav-link" href="http://127.0.0.1:8000/inventory/dashboard/">Dashboard<span class="sr-only">(current)</span></a>
         </li>-->
-        </ul>
-       
+      </li>
+    </ul>
 
-
-       <!-- <ul class="navbar-nav">
+    <!-- <ul class="navbar-nav">
             <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                 
@@ -42,10 +68,8 @@
         </form>
         
         -->
-        <!--<a class="btn btn-outline bg-warning"  href="{% url 'cyberinscriber:login_view' %}">Login</a>
+    <!--<a class="btn btn-outline bg-warning"  href="{% url 'cyberinscriber:login_view' %}">Login</a>
         <a class="btn btn-primary ml-2 mr-2" href="#">Register</a>  -->
-
-        
-    </div>
-    </nav>
-    <!--Navbar Ends-->
+  </div>
+</nav>
+<!--Navbar Ends-->

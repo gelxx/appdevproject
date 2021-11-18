@@ -64,11 +64,7 @@ def LandingView(request):
 
 @login_required(login_url = 'cyberinscriber:login_view')
 def MyHomeView(request):
-	notes = Notes.objects.all()
-	context = {
-		'cNotes': notes
-	}
-	return render(request,'myhome.html', context)
+		return render(request,'myhome.html', {})
 
 
 

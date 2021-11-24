@@ -18,11 +18,11 @@
         <ul class="navbar-nav bg-gradient sidebar sidebar-dark accordion " style="background-color:#800000;" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="index.html">
-                <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+            <a class="sidebar-brand d-flex align-items-center  container-fluid " href="index.html">
+                <div class="sidebar-brand-icon ">
+                    <img class="p-0" src="{% static 'assets/images/Cyber Inscriber Logo.png' %}" width="50px" height="50px" alt="LOGO">
                 </div>
-                <div class="sidebar-brand-text mx-3">CyberInscriber <sup></sup></div>
+                <div class="sidebar-brand-text mx-3">Cyber <br> Inscriber <sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -34,6 +34,7 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Recent Activity</span></a>
             </li>
+            
 
             <!-- Divider -->
             <hr class="sidebar-divider">
@@ -87,22 +88,23 @@
             </div>-->
 
             <!-- Nav Item - Pages Collapse Menu -->
+            
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fa fa-sticky-note"></i>
                     <span>Notes</span>
                 </a>
+                
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">...</h6>
-                        <a class="collapse-item" href="#">..</a>
-                        <a class="collapse-item" href="#">..</a>
-                        <a class="collapse-item" href="#">..</a>
-                        <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">..</h6>
-                        <a class="collapse-item" href="#">..</a>
-                        <a class="collapse-item" href="#">..</a>
+                        <h6 class="collapse-header">Notes: </h6>
+                        {% for notes in cNotes %}
+                        <a class="collapse-item" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm" href="#" data-toggle="modal" data-target="#noteDetail">{{notes.title}}</a>
+                        <!-- <a href="#" data-toggle="modal" data-target="#createNewSchedule" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                            class="fas fa-download fa-sm text-white-50"></i> Add New</a> -->
+                        {% endfor %}
+                        
                     </div>
                 </div>
             </li>
@@ -349,7 +351,18 @@
                 </nav>
                 <!-- End of Topbar -->
 
-                
+                <!-- Begin Page Content -->
+                <div class="container-fluid">
+
+                    <!-- Page Heading -->
+                    <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                        <h1 class="h3 mb-0 text-gray-800">Recent Activity</h1>
+                        <a href="#" data-toggle="modal" data-target="#createNewSchedule" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-download fa-sm text-white-50"></i> Add New</a>
+                    </div>
+
+
+                </div>
 
             <!-- Footer -->
             <footer class="sticky-footer bg-white">
@@ -372,6 +385,61 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
+    <!-- Create New Schedule Modal-->
+    <div class="modal fade" id="createNewSchedule" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-calendar" aria-hidden="true"></i> &nbsp; Add New Schedule</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <form>
+                        <div class="form-group">
+                          <input type="text" class="form-control" placeholder="Title" id="recipient-name">
+                        </div>
+                        <div class="form-check form-check-inline">
+                            <input class="form-check-input p-3" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" checked>
+                            <label class="form-check-label" for="inlineRadio1">Reminder</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Notes</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1">Task</label>
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Date:</label>
+                            <input type="date" class="form-control" id="recipient-name" >
+                          </div>
+                          <div class="row g-3">
+                            <div class="col">
+                              <input type="time" class="form-control" placeholder="First name" aria-label="First name">
+                            </div>
+                            <div class="col">
+                              <input type="time" class="form-control" placeholder="Last name" aria-label="Last name">
+                            </div>
+                          </div>
+                          <div class="form-group">
+                            <label for="message-text" class="col-form-label">Description:</label>
+                            <textarea class="form-control" id="message-text"></textarea>
+                          </div>  
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                    <button class="btn btn-primary" type="submit" role="button" href="#">Create</button>
+                </div>
+            </form>
+            </div>
+        </div>
+    </div>
+    
+
     <!-- Logout Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
@@ -392,6 +460,33 @@
         </div>
     </div>
 
+    <!--Note detail modal-->
+    {% for note in cNotes %}
+    <div class="modal fade" id="noteDetail" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    
+                    <h5 class="modal-title" id="exampleModalLabel">{{note.title}}</h5>
+                    
+                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">×</span>
+                    </button>
+                </div>
+                <div class="modal-body">{{note.content}}</div>
+                
+                <div class="modal-footer">
+                   
+                </div>
+                
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+    
+
+  
    
 
 </body>
